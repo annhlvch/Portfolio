@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo List</title>
+        <script src="js/front.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+           body {
+            background: rgb(246, 122, 250);
+            font-size: 25px
+}     
+            button , input {
+                    background: rgb(121, 255, 38);
+                    color: black;
+            }
+           
+            body.dark-mode  button, body.dark-mode  input {
+                    background: rgb(135, 250, 241);
+                    color: rgb(0, 0, 0);
+            }
+
+        </style> 
+    </head>
+
+    <body>
+       
+        <input id="todo" placeholder="input task">
+        <button id="todo-button">add</button>
+        <ul id="todo-list"></ul>
+
+       
+        <button  
+        
+        class="theme-toggle" 
+        onclick="themeswitch()"
+        id="theme-toggle" 
+        title="Toggles light & dark" 
+        aria-label="auto"
+        aria-live="polite">
+        
+            <image class="sun" src="https://cdn.pixabay.com/photo/2019/07/15/01/22/sun-4338405_960_720.png" aria-hidden="true" width="35" height="35" padding="1px" >
+        
+                <script>
+                function themeswitch() {
+                    var element = document.body;
+                    element.classList.toggle("dark-mode");
+                 }  </script>
+                
+
+    </button>
+
+    
+    </body>
+</html>
